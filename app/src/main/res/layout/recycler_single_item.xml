@@ -1,71 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    android:id="@+id/cardView"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="5dp"
-    >
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
     <LinearLayout
-        android:layout_margin="8dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
 
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <ImageView
-                android:scaleType="centerCrop"
                 android:id="@+id/imgThumb"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/sample" />
 
             <LinearLayout
-
-
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#F9F9F9"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <LinearLayout
-                    android:layout_weight="0.7"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
                     <TextView
-                        android:paddingLeft="5dp"
-                        android:textStyle="bold"
-                        android:textColor="#626162"
+
                         android:id="@+id/tvSongName"
-                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
                         android:text="Hello To Myself"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textColor="#626162"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
                     <TextView
+                        android:id="@+id/tvArtist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
                         android:paddingLeft="5dp"
-                        android:textSize="14sp"
-                        android:id="@+id/tvArtist"
                         android:text="Artist"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <ImageButton
-
-                    android:scaleType="centerInside"
                     android:id="@+id/btnMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="0.3"
                     android:background="@drawable/button_with_transparent_opacity"
-                    android:src="@drawable/ic_menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_more_vert_black_24dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

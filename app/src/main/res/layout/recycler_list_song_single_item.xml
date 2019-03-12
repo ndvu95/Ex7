@@ -7,39 +7,47 @@
 
 
     <LinearLayout
+        android:weightSum="1"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:layout_weight="0.9"
             android:paddingLeft="5dp"
             android:gravity="center|left"
             android:layout_margin="10dp"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
-                android:maxLength="32"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLength="55"
                 android:textStyle="bold"
                 android:textColor="#3D3D41"
                 android:textSize="16sp"
                 android:text="All About You"
                 android:id="@+id/tvSongName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
-                android:maxLength="32"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:maxLength="12"
                 android:text="Hilary Duff | All About You - Single"
                 android:id="@+id/tvArtistName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout
+            android:layout_weight="0.1"
             android:paddingRight="15dp"
             android:gravity="center|right"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
             <ImageButton
+                android:scaleType="centerInside"
                 android:background="@drawable/button_with_transparent_opacity"
                 android:src="@drawable/ic_menu"
                 android:layout_width="wrap_content"

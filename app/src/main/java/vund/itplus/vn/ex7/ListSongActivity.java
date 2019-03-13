@@ -44,6 +44,8 @@ public class ListSongActivity extends AppCompatActivity {
         id = getIntent().getStringExtra("ID");
 
         artist = (Artist) getIntent().getSerializableExtra("ArtistObject");
+
+
         initUI();
         tvArtist.setText(artist.getArtistName());
         getData();
